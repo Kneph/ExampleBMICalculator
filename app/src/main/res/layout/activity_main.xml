@@ -33,7 +33,8 @@
                 android:id="@+id/etxt_weight"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:hint="@string/hint_weight"/>
+                android:hint="@string/hint_weight"
+                android:inputType="numberDecimal"/>
 
     </LinearLayout>
 
@@ -62,7 +63,8 @@
                 android:id="@+id/etxt_height"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:hint="@string/hint_height"/>
+                android:hint="@string/hint_height"
+                android:inputType="number"/>
 
     </LinearLayout>
 
