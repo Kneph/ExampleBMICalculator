@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
             val height = java.lang.Double.parseDouble(heightEditText.text.toString()) / 100
             val weight = java.lang.Double.parseDouble(weightEditText.text.toString())
 
-            val bmi = weight / (height * height)
+            val bmi= String.format("%.2f", weight / (height * height)).toDouble()
             resultViev.text = bmi.toString()
         }
     }
