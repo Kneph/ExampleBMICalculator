@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">ExampleBMICalculator</string>
+    <string name="height">Pituus</string>
+    <string name="weight">Paino</string>
+    <string name="cm">cm</string>
+    <string name="kg">kg</string>
 </resources>
