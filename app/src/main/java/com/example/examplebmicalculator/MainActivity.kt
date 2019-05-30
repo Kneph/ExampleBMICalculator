@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         val weightEditText = findViewById<EditText>(R.id.etxt_weight)
         val resultViev = findViewById<TextView>(R.id.txt_result)
 
-        if (!heightEditText.text.toString().isNullOrEmpty() && !weightEditText.text.toString().isNullOrEmpty()) {
+        if (heightEditText.text.toString().isNotEmpty() && weightEditText.text.toString().isNotEmpty()) {
 
             val height = java.lang.Double.parseDouble(heightEditText.text.toString()) / 100
             val weight = java.lang.Double.parseDouble(weightEditText.text.toString())
