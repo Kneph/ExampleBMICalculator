@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ExampleBMICalculator</string>
+    <string name="height">Pituus</string>
+    <string name="weight">Paino</string>
+    <string name="hint_weight">paino kiloissa</string>
+    <string name="hint_height">pituus senteissä</string>
+    <string name="calculate">Laske</string>
+</resources>
