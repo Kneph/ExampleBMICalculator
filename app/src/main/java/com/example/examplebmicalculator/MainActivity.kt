@@ -8,16 +8,16 @@ import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
 
-    val heightEditText = findViewById<View>(R.id.etxt_height) as EditText
-    val weightEditText = findViewById<View>(R.id.etxt_weight) as EditText
-    val resultViev = findViewById<View>(R.id.txt_result) as TextView
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
     }
 
     fun calculateBMI(v: View) {
+
+        val heightEditText = findViewById<EditText>(R.id.etxt_height)
+        val weightEditText = findViewById<EditText>(R.id.etxt_weight)
+        val resultViev = findViewById<TextView>(R.id.txt_result)
 
         if (!heightEditText.text.toString().isNullOrEmpty() && !weightEditText.text.toString().isNullOrEmpty()) {
 
@@ -26,7 +26,6 @@ class MainActivity : AppCompatActivity() {
 
             val bmi = weight / (height * height)
             resultViev.text = bmi.toString()
-
         }
     }
 }
