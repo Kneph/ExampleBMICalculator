@@ -34,7 +34,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="@string/hint_weight"
-                android:inputType="numberDecimal"/>
+                android:inputType="numberDecimal"
+                android:autofillHints="@string/weight"/>
 
     </LinearLayout>
 
@@ -64,7 +65,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="@string/hint_height"
-                android:inputType="number"/>
+                android:inputType="number"
+                android:autofillHints="@string/height"/>
 
     </LinearLayout>
 
