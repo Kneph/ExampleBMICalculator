@@ -78,6 +78,7 @@
             app:layout_constraintTop_toBottomOf="@id/parent_height"
             android:text="@string/calculate"
             android:layout_marginTop="@dimen/default_margin_double"
+            android:onClick="calculateBMI"
     />
 
     <TextView
