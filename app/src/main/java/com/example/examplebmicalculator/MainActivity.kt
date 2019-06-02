@@ -2,6 +2,7 @@ package com.example.examplebmicalculator
 
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.example.examplebmicalculator.databinding.ActivityMainBinding
@@ -26,6 +27,9 @@ class MainActivity : AppCompatActivity() {
             val bmi = String.format("%.2f", weight / (height * height)).toDouble()
             binding.txtResult.text = bmi.toString()
             binding.bmi = bmi
+
+        } else {
+            Toast.makeText(this, this.resources.getString(R.string.toast_not_found), Toast.LENGTH_LONG).show()
         }
     }
 }

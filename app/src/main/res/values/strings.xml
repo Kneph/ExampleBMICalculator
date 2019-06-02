@@ -7,4 +7,5 @@
     <string name="hint_weight">weight in kg</string>
     <string name="hint_height">height in cm</string>
     <string name="calculate">Calculate</string>
+    <string name="toast_not_found">Fill in all the fields for a result</string>
 </resources>

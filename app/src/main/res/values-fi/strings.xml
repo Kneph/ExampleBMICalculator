@@ -6,4 +6,5 @@
     <string name="hint_weight">paino kiloissa</string>
     <string name="hint_height">pituus senteissä</string>
     <string name="calculate">Laske</string>
+    <string name="toast_not_found">Täytä kaikki vaadittavat kentät</string>
 </resources>
