@@ -2,30 +2,29 @@ package com.example.examplebmicalculator
 
 import android.os.Bundle
 import android.view.View
-import android.widget.EditText
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.databinding.DataBindingUtil
+import com.example.examplebmicalculator.databinding.ActivityMainBinding
+
 
 class MainActivity : AppCompatActivity() {
 
+    private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
     }
 
     fun calculateBMI(v: View) {
 
-        val heightEditText = findViewById<EditText>(R.id.etxt_height)
-        val weightEditText = findViewById<EditText>(R.id.etxt_weight)
-        val resultViev = findViewById<TextView>(R.id.txt_result)
+        if (binding.etxtHeight.text.toString().isNotEmpty() && binding.etxtWeight.text.toString().isNotEmpty()) {
 
-        if (heightEditText.text.toString().isNotEmpty() && weightEditText.text.toString().isNotEmpty()) {
+            val height = java.lang.Double.parseDouble(binding.etxtHeight.text.toString()) / 100
+            val weight = java.lang.Double.parseDouble(binding.etxtWeight.text.toString())
 
-            val height = java.lang.Double.parseDouble(heightEditText.text.toString()) / 100
-            val weight = java.lang.Double.parseDouble(weightEditText.text.toString())
-
-            val bmi= String.format("%.2f", weight / (height * height)).toDouble()
-            resultViev.text = bmi.toString()
+            val bmi = String.format("%.2f", weight / (height * height)).toDouble()
+            binding.txtResult.text = bmi.toString()
         }
     }
 }
