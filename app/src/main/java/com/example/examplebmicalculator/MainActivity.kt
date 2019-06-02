@@ -25,6 +25,7 @@ class MainActivity : AppCompatActivity() {
 
             val bmi = String.format("%.2f", weight / (height * height)).toDouble()
             binding.txtResult.text = bmi.toString()
+            binding.bmi = bmi
         }
     }
 }
