@@ -21,8 +21,8 @@ class MainActivity : AppCompatActivity() {
 
         if (binding.etxtHeight.text.toString().isNotEmpty() && binding.etxtWeight.text.toString().isNotEmpty()) {
 
-            val height = java.lang.Double.parseDouble(binding.etxtHeight.text.toString()) / 100
-            val weight = java.lang.Double.parseDouble(binding.etxtWeight.text.toString())
+            val height = binding.etxtHeight.text.toString().toDouble() / 100
+            val weight = binding.etxtWeight.text.toString().toDouble()
 
             val bmi = String.format("%.2f", weight / (height * height)).toDouble()
             binding.txtResult.text = bmi.toString()
